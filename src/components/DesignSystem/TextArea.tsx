@@ -13,7 +13,7 @@ export default function TextArea({error,...rest} : TextareaHTMLAttributes<HTMLTe
       <div className="flex flex-col w-full items-end">
       <textarea
         className="border-[1px] border-[#F95E5A] bg-[#FEEFEE] text-[#F95E5A] placeholder-[#F95E5A]
-        focus:outline-none max-w-[900px] w-full h-[180px] pl-[20px] focus:placeholder-[#F95E5A] rounded-[5px]"
+        focus:outline-none w-full h-[180px] pl-[20px] focus:placeholder-[#F95E5A] rounded-[5px]"
         placeholder={isFocused ? "Focused..." : "Required..."}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
@@ -24,7 +24,7 @@ export default function TextArea({error,...rest} : TextareaHTMLAttributes<HTMLTe
     ) : (
       <textarea
         className="border-[1px] border-#EBEAED bg-[#F5F4F6] text-[#170C3A] placeholder-[#B1ADB9]
-        focus:outline-none max-w-[900px] w-full h-[180px] pl-[20px] focus:placeholder-[#8F8A9B] rounded-[5px]"
+        focus:outline-none w-full h-[180px] pl-[20px] focus:placeholder-[#8F8A9B] rounded-[5px]"
         placeholder={isFocused ? "Focused..." : "Required..."}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}

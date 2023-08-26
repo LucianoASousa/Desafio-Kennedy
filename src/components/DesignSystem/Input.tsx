@@ -12,7 +12,7 @@ const isErrored = error?.some((err) => err.includes(rest.name as string));
     {isErrored ? (<div className="flex flex-col items-end w-full">
       <input
         className="border-[1px] border-[#F95E5A] bg-[#FEEFEE] text-[#F95E5A] placeholder-[#F95E5A]
-        focus:outline-none max-w-[900px] w-full h-[40px] pl-[20px] focus:placeholder-[#F95E5A] rounded-[5px]"
+        focus:outline-none w-full h-[40px] pl-[20px] focus:placeholder-[#F95E5A] rounded-[5px]"
         placeholder={isFocused ? "Focused..." : "Required..."}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}

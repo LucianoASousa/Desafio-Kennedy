@@ -43,12 +43,12 @@ export default function Dashboard() {
         afterOpenModal={() => {}}
         closeModal={() => setIsOpenAdd(false)}
         />
-      <div className="max-w-[800px] w-full h-full flex flex-col items-center justify-start overflow-hidden">
+      <div className="max-w-[800px] w-full h-full flex flex-col items-center justify-start overflow-hidden ">
         <div className="flex justify-between w-full gap-2">
           <SearchBar onChange={(e) => getToolsByTag(e.target.value)}/>
           <Button styles="success" onClick={()=> setIsOpenAdd(true)}><HiOutlinePlus className="text-white text-xl"/>Novo</Button>
         </div>
-        <div className="flex flex-wrap justify-center mt-4 gap-2 overflow-auto">
+        <div className="flex flex-wrap justify-center mt-4 gap-2 overflow-auto w-full">
           {toolsFiltered.map((tool) => (
             <CardTool key={tool.id} {...tool} handleDelete={() => handleDelete(tool)} />
           ))}
