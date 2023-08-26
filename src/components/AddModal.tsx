@@ -59,13 +59,15 @@ export default function AddModal({ isOpen, closeModal, afterOpenModal}: {
       onRequestClose={closeModal}
       className="bg-white rounded-[5px] max-w-[900px] w-full h-fit shadow-modal border-[1px] flex flex-col justify-between p-[30px]"
       overlayClassName="fixed inset-0 bg-[#000000] bg-opacity-50 flex justify-center items-center"
+      ariaHideApp={false}
     >
       <form onSubmit={handleSubmit} className="flex flex-col justify-between h-full w-full">
         <div className="flex justify-between items-center">
-          <h2 className="text-lg font-bold">Adicionar Ferramenta</h2>
+          <h2 className="text-lg font-bold" data-testid="add-modal">Adicionar Ferramenta</h2>
           <HiOutlineXMark
             className="text-[#8F8A9B] font-extrabold text-2xl cursor-pointer"
             onClick={closeModal}
+            data-testid="close-modal"
           />
         </div>
         <div className="flex gap-2 justify-between">
@@ -77,6 +79,7 @@ export default function AddModal({ isOpen, closeModal, afterOpenModal}: {
               id="title"
               placeholder="Ex: Notion"
               error={error}
+              data-testid="input"
             />
           </div>
           <div className="flex flex-col gap-2 mt-4 w-full">
@@ -87,6 +90,7 @@ export default function AddModal({ isOpen, closeModal, afterOpenModal}: {
               id="link"
               placeholder="Ex: https://notion.so"
               error={error}
+              data-testid="input"
             />
           </div>
         </div>
@@ -98,6 +102,7 @@ export default function AddModal({ isOpen, closeModal, afterOpenModal}: {
             id="description"
             placeholder="Ex: Todos os seus pensamentos, projetos e anotações em um só lugar."
             error={error}
+            data-testid="input"
           />
         </div>
         <div className="flex flex-col gap-2 mt-4 w-full">
@@ -108,6 +113,7 @@ export default function AddModal({ isOpen, closeModal, afterOpenModal}: {
             id="tags"
             placeholder="Ex: organization, planning"
             error={error}
+            data-testid="input"
           />
         </div>
         <div className="flex justify-end gap-2 mt-4">

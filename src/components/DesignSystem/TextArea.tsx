@@ -19,7 +19,7 @@ export default function TextArea({error,...rest} : TextareaHTMLAttributes<HTMLTe
         onBlur={() => setIsFocused(false)}
         {...rest}
       />
-      <p className="text-[#F95E5A] text-sm mt-1">{errorMessage}</p>
+      <p className="text-[#F95E5A] text-sm mt-1" data-testid="error-message">{errorMessage}</p>
     </div>
     ) : (
       <textarea

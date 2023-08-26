@@ -35,7 +35,7 @@ export default function Dashboard() {
         isOpen={isOpenDanger}
         afterOpenModal={() => {}}
         closeModal={() => setIsOpenDanger(false)}
-        title={`Remove ${selectedTool.title}?`}
+        title={`Remover ${selectedTool.title}?`}
         description="Você tem certeza que quer remover essa ferramenta?"
         />
         <AddModal
@@ -46,7 +46,7 @@ export default function Dashboard() {
       <div className="max-w-[800px] w-full h-full flex flex-col items-center justify-start overflow-hidden ">
         <div className="flex justify-between w-full gap-2">
           <SearchBar onChange={(e) => getToolsByTag(e.target.value)}/>
-          <Button styles="success" onClick={()=> setIsOpenAdd(true)}><HiOutlinePlus className="text-white text-xl"/>Novo</Button>
+          <Button styles="success" onClick={()=> setIsOpenAdd(true)} data-testid="add"><HiOutlinePlus className="text-white text-xl"/>Novo</Button>
         </div>
         <div className="flex flex-wrap justify-center mt-4 gap-2 overflow-auto w-full">
           {toolsFiltered?.map((tool) => (

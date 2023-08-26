@@ -1,10 +1,8 @@
 import { ToastContainer,} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { MakeRoutes } from './routes';
-import Modal from 'react-modal';
 
 function App() {
-  Modal.setAppElement('#root');
 
   return (
     <>

@@ -10,7 +10,7 @@ export function CardTool({title, link, description, tags, handleDelete} : iTools
     <CardMain>
       <div className="flex justify-between items-center">
         <a href={link}><h1 className="text-lg font-bold underline">{title}</h1></a>
-        <Button styles="danger" onClick={handleDelete}>
+        <Button styles="danger" onClick={handleDelete} data-testid='Delete'>
             <HiOutlineXMark className="text-white" />
           Deletar
           </Button>

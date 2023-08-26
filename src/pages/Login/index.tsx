@@ -44,13 +44,13 @@ export default function Login(){
             <div className="flex flex-col items-end justify-center gap-3 w-full">
               <div className="flex flex-col w-full">
                 <Label htmlFor="email">Email</Label>
-                <Input type="email" name="email" error={errorLogin}/>
+                <Input type="email" name="email" error={errorLogin} data-testid="Email"/>
               </div>
               <div className="flex flex-col w-full">
                 <Label htmlFor="password" error={error}>Password</Label>
-                <Input type="password" name="password" error={errorLogin}/>
+                <Input type="password" name="password" error={errorLogin} data-testid="Password"/>
               </div>
-              <Button type="submit" styles='neutral'>Entrar</Button>
+              <Button type="submit" styles='neutral' data-testid="Login">Entrar</Button>
             </div>
           </form>
         </div>

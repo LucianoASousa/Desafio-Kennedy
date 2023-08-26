@@ -1,5 +1,5 @@
 import { ChangeEvent} from "react";
-import {TfiSearch} from 'react-icons/tfi'
+import { TfiSearch } from 'react-icons/tfi'
 
 export default function SearchBar({onChange}: {onChange: (e: ChangeEvent<HTMLInputElement>) => void}) {
   return (
