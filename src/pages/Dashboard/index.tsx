@@ -49,7 +49,7 @@ export default function Dashboard() {
           <Button styles="success" onClick={()=> setIsOpenAdd(true)}><HiOutlinePlus className="text-white text-xl"/>Novo</Button>
         </div>
         <div className="flex flex-wrap justify-center mt-4 gap-2 overflow-auto w-full">
-          {toolsFiltered.map((tool) => (
+          {toolsFiltered?.map((tool) => (
             <CardTool key={tool.id} {...tool} handleDelete={() => handleDelete(tool)} />
           ))}
         </div>

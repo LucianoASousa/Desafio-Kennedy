@@ -17,7 +17,7 @@ export function CardTool({title, link, description, tags, handleDelete} : iTools
       </div>
       <p className="text-sm text-[#170C3A] mt-2">{description}</p>
       <div className="flex flex-wrap gap-1">
-        {tags.map((tag) => (
+        {tags?.map((tag) => (
           <span key={uuid()} className="text-sm text-white bg-[#F95E5A] rounded-[13px] px-2 py-1">{`#${tag}`}</span>
         ))}
       </div>
