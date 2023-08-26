@@ -1,27 +1,109 @@
-# React + TypeScript + Vite
+Desafio Kennedy
+-
+Projeto desenvolvido para o desafio da Kennedy.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tecnologias utilizadas
+- React 
+- React Icons 
+- React Modal
+- React Toastify
+- Tailwindcss
+- Axios
+- Typescript
+- Storybook
+- Yup
+- Eslint
 
-Currently, two official plugins are available:
+## Como executar o projeto
+```bash
+# clonar repositório
+git clone https://github.com/LucianoASousa/Desafio-Kennedy.git
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# instalar dependências
+yarn install
 
-## Expanding the ESLint configuration
+# executar o projeto
+yarn dev
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+# o projeto será executado na porta:5173 - acesse http://localhost:5173
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Como executar o storybook
+```bash
+# executar o storybook
+yarn storybook
+
+# o storybook será executado na porta:6006 - acesse http://localhost:6006
+```
+<img src="src/assets/docs/images/storyBook.png" width="600" height="250" />
+
+## Como executar o projeto com container
+
+>Mude o valor da variável de ambiente `VITE_API_URL` no docker-compose.yml
+
+```bash
+# executar o projeto
+docker-compose up
+
+# o projeto será executado na porta:4173 - acesse http://localhost:4173
+
+# o storybook será executado na porta:6006 - acesse http://localhost:6006
+```
+
+## Como executar os testes
+```bash
+# executar os testes
+yarn test
+```
+
+## Executando eslint
+```bash
+# executar o eslint
+yarn lint
+```
+
+## Explicando a utilização das tecnologias
+
+### React
+- React é uma biblioteca JavaScript que mistura HTML com JavaScript, permitindo a criação de componentes reutilizáveis.
+
+### React Icons
+- Utilizei o react icons para ter acesso a diversos ícones usansdo como componentes.
+
+### React Modal
+- Utilizei o react modal para criar os modais de adicionar de excluir.
+
+### React Toastify
+- Utilizei o react toastify para criar as notificações.
+
+### Tailwindcss
+- Utilizei o tailwindcss para criar os estilos do projeto, acho uma otima ferramenta para criar estilos de forma rápida.
+
+### Axios
+- Utilizei o axios para fazer as requisições para a api.
+
+### Typescript
+- Utilizei o typescript para ter acesso a tipagem e ter um código mais limpo.
+
+### Storybook
+- Utilizei o storybook para documentar os componentes.
+
+### Yup
+- Utilizei o yup para fazer a validação dos campos.
+
+### Eslint
+- Utilizei o eslint para manter o padrão de código.
+
+# Telas:
+
+### Tela de Login:
+<img src="src/assets/docs/images/telaLogin.png" width="500" height="250" />
+
+### Tela de Dashboard:
+<img src="src/assets/docs/images/dashboard.png" width="500" height="250" />
+
+### Tela de Adicionar Ferramentas:
+<img src="src/assets/docs/images/adicionarFerramentas.png" width="500" height="250" />
+
+### Tela de Remover Ferramentas:
+<img src="src/assets/docs/images/removerFerramentas.png" width="500" height="250" />
