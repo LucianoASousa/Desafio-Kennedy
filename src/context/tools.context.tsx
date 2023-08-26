@@ -5,6 +5,17 @@ import { toast } from "react-toastify";
 import CustomToast from "../components/CustomToast";
 import { AxiosError } from "axios";
 
+/**
+ * Objeto de contexto para gerenciamento de dados de ferramentas.
+ * @typedef {Object} ToolsContext
+ * @property {iTools[]} tools - Array de ferramentas.
+ * @property {iTools[]} toolsFiltered - Array de ferramentas filtradas.
+ * @property {(data: Omit<iTools, "id">) => void} addTools - Função para adicionar uma nova ferramenta.
+ * @property {(tag: string) => void} getToolsByTag - Função para obter ferramentas por tag.
+ * @property {(id: string) => void} getToolsById - Função para obter uma ferramenta por ID.
+ * @property {(id: string) => void} deleteToolsById - Função para deletar uma ferramenta por ID.
+ * @property {() => void} getTools - Função para obter todas as ferramentas.
+ */
 export const ToolsContext = createContext<{
   tools: iTools[];
   toolsFiltered: iTools[];
@@ -24,7 +35,16 @@ export const ToolsContext = createContext<{
 });
 
 export function ToolsProvider({ children }: { children: JSX.Element }) {
-  const [tools, setTools] = useState<iTools[]>([]);
+  const [tools, setTools] = useState<iTools[]>([
+    {
+      id: "1",
+      title: "Notion",
+      link: "https://notion.so",
+      description:
+        "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized. ",
+        tags: ["organization", "planning", "collaboration", "writing", "calendar"],
+    },
+  ]);
   const [toolsFiltered, setToolsFiltered] = useState<iTools[]>(tools);
 
   const getTools = useCallback(async () => {

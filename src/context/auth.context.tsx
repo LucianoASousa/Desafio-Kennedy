@@ -6,6 +6,18 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import CustomToast from "../components/CustomToast";
 
+/**
+ * Contexto para gerenciamento do estado de autenticação.
+ * @typedef {Object} AuthContext
+ * @property {string} token - O token de autenticação.
+ * @property {React.Dispatch<React.SetStateAction<string>>} setToken - Função para definir o token de autenticação.
+ * @property {boolean} isAuthenticated - Sinalizador indicando se o usuário está autenticado.
+ * @property {React.Dispatch<React.SetStateAction<boolean>>} setIsAuthenticated - Função para definir o sinalizador de autenticação.
+ * @property {(data: iLogin) => void} login - Função para realizar o login do usuário.
+ * @property {() => void} logout - Função para realizar o logout do usuário.
+ * @property {boolean} [isPending] - Sinalizador indicando que o redirecionamento está pendente.
+ * @property {string[]} error - Array de mensagens de erro.
+ */
 
 export const AuthContext = createContext<{
   token: string;
@@ -29,6 +41,7 @@ export const AuthContext = createContext<{
 });
 
 export function AuthProvider({ children }: { children: JSX.Element }) {
+  
   const [token, setToken] = useState<string>('');
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [isPending, startTransition] = useTransition();
