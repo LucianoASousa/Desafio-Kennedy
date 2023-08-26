@@ -1,0 +1,12 @@
+version: '3'
+services:
+  your-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4173:4173"
+      - "6006:6006"
+    environment:
+      VITE_API_URL: ""
+    command: sh -c "yarn preview && yarn storybook"
