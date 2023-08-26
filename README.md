@@ -14,6 +14,9 @@ Projeto desenvolvido para o desafio da Kennedy.
 - Yup
 - Eslint
 
+## Acessar o projeto
+-> [Desafio Kennedy](https://desafio-kennedy.vercel.app/) 
+
 ## Como executar o projeto
 ```bash
 # clonar repositório

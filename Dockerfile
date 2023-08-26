@@ -7,9 +7,8 @@ COPY . .
 
 RUN yarn install
 
-RUN yarn build
+RUN yarn dev
 
 EXPOSE 5173
-EXPOSE 6006
 
 CMD ["sh", "-c", "yarn preview && yarn storybook"]
