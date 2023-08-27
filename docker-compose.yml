@@ -9,4 +9,4 @@ services:
       - "6006:6006"
     environment:
       VITE_API_URL: ""
-    command: sh -c "yarn preview && yarn storybook"
+    command: ./start.sh

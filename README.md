@@ -3,13 +3,14 @@ Desafio Kennedy
 Projeto desenvolvido para o desafio da Kennedy.
 
 ## Tecnologias utilizadas
-- React 
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=git,docker,jest,react,typescript,tailwind,vite"/>
+</p> 
+
 - React Icons 
 - React Modal
 - React Toastify
-- Tailwindcss
 - Axios
-- Typescript
 - Storybook
 - Yup
 - Eslint
@@ -41,6 +42,11 @@ yarn storybook
 <img src="src/assets/docs/images/storyBook.png" width="600" height="250" />
 
 ## Como executar o projeto com container
+>Para executar o projeto com container é necessário ter o docker e o docker-compose instalado na máquina.
+```bash
+# execute 
+sudo apt-get install docker docker-compose
+```
 
 >Mude o valor da variável de ambiente `VITE_API_URL` no docker-compose.yml
 
@@ -54,10 +60,14 @@ docker-compose up
 ```
 
 ## Como executar os testes
+>Os testes foram feitos utilizando o vitest e testing-library para testar os componentes.
+> 
 ```bash
-# executar os testes
+```bash
+# executar os testes 
 yarn test
 ```
+>Você será direcionado para o navegador para ver os testes.
 
 ## Executando eslint
 ```bash
