@@ -2,8 +2,6 @@ import { HiOutlineXMark } from 'react-icons/hi2';
 import Modal from 'react-modal';
 import { Button } from '.';
 
-if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#root');
-
 export default function DangerModal({
   afterOpenModal,
   closeModal,
