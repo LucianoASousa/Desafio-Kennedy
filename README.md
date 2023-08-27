@@ -16,7 +16,7 @@ Projeto desenvolvido para o desafio da Kennedy.
 - Eslint
 
 ## Acessar o projeto
--> [Desafio Kennedy](https://desafio-kennedy.vercel.app/) 
+-> [Desafio Kennedy](https://desafio-kennedy-beta.vercel.app/) 
 
 ## Como executar o projeto
 ```bash
