@@ -26,6 +26,8 @@ git clone https://github.com/LucianoASousa/Desafio-Kennedy.git
 # instalar dependências
 yarn install
 
+# criar arquivo .env e adicionar a variável de ambiente VITE_API_URL
+
 # executar o projeto
 yarn dev
 
@@ -54,15 +56,13 @@ sudo apt-get install docker docker-compose
 # executar o projeto
 docker-compose up
 
-# o projeto será executado na porta:4173 - acesse http://localhost:4173
-
-# o storybook será executado na porta:6006 - acesse http://localhost:6006
+# o projeto será executado na porta:5173 - acesse http://localhost:5173
 ```
 
 ## Como executar os testes
 >Os testes foram feitos utilizando o vitest e testing-library para testar os componentes.
-> 
-```bash
+>
+
 ```bash
 # executar os testes 
 yarn test
@@ -78,34 +78,34 @@ yarn lint
 ## Explicando a utilização das tecnologias
 
 ### React
-- React é uma biblioteca JavaScript que mistura HTML com JavaScript, permitindo a criação de componentes reutilizáveis.
+>React é uma biblioteca JavaScript que mistura HTML com JavaScript, permitindo a criação de componentes reutilizáveis.
 
 ### React Icons
-- Utilizei o react icons para ter acesso a diversos ícones usansdo como componentes.
+>Utilizei o react icons para ter acesso a diversos ícones usansdo como componentes.
 
 ### React Modal
-- Utilizei o react modal para criar os modais de adicionar de excluir.
+>Utilizei o react modal para criar os modais de adicionar de excluir.
 
 ### React Toastify
-- Utilizei o react toastify para criar as notificações.
+>Utilizei o react toastify para criar as notificações.
 
 ### Tailwindcss
-- Utilizei o tailwindcss para criar os estilos do projeto, acho uma otima ferramenta para criar estilos de forma rápida.
+>Utilizei o tailwindcss para criar os estilos do projeto, acho uma otima ferramenta para criar estilos de forma rápida.
 
 ### Axios
-- Utilizei o axios para fazer as requisições para a api.
+>Utilizei o axios para fazer as requisições para a api.
 
 ### Typescript
-- Utilizei o typescript para ter acesso a tipagem e ter um código mais limpo.
+>Utilizei o typescript para ter acesso a tipagem e ter um código mais limpo.
 
 ### Storybook
-- Utilizei o storybook para documentar os componentes.
+>Utilizei o storybook para documentar os componentes.
 
 ### Yup
-- Utilizei o yup para fazer a validação dos campos.
+>Utilizei o yup para fazer a validação dos campos.
 
 ### Eslint
-- Utilizei o eslint para manter o padrão de código.
+>Utilizei o eslint para manter o padrão de código.
 
 # Telas:
 
